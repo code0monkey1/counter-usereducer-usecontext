@@ -29,7 +29,9 @@ export const CounterContextProvider = (props) => {
     </CounterContext.Provider>
   )
 }
-
+/* 
+As a technical detail, it should be noted that the helper functions useCounterValue and useCounterDispatch are defined as custom hooks, because calling the hook function useContext is possible only from React components or custom hooks. Custom Hooks, on the other hand, are JavaScript functions whose name must start with the string use
+*/
 export const useCounterValue = () => {
   const counterAndDispatch = useContext(CounterContext)
   return counterAndDispatch[0]
