@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer } from 'react'
-const ACTION={
+
+export const ACTION={
   INCREASE:"INC",
   DECREASE:"DEC",
   ZERO:"ZERO",
@@ -40,11 +41,6 @@ export const useCounterValue = () => {
 export const useCounterDispatch = () => {
   const counterAndDispatch = useContext(CounterContext)
   return counterAndDispatch[1]
-}
-
-export const useActionTypes = () => {
-  const counterAndDispatch = useContext(CounterContext)
-  return counterAndDispatch[2]
 }
 
 export default CounterContext

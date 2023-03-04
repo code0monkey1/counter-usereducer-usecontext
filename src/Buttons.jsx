@@ -1,10 +1,9 @@
 import React from 'react';
-import { useActionTypes, useCounterDispatch } from './CounterContext';
-
+import { ACTION, useCounterDispatch } from './CounterContext';
 const  Buttons =() =>{
     
   const counterDispatch = useCounterDispatch();
-  const ACTION = useActionTypes()
+
    
   return (
     <div> 
